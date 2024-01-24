@@ -1,0 +1,28 @@
+#zdj img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
+
+#profil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#info {
+    width: 600px;
+    padding-left: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #zdj img {
+        width: 450px;
+        height: 450px;
+        
+    }
+}

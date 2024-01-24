@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adopcja</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="adopcja_styl.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+</head>
+
+
+<body>    
+    <div>Nagłówek </div>
+    <div>Menu</div>
+
+    <div id="linki">
+        <a class="miniMenu" href="poradnik.html">Adopcja</a>
+        <a class="miniMenu" href="koty.html">Koty</a>
+        <a class="miniMenu" href="psy.html">Psy</a>
+        <a class="miniMenu" href="inne.html">Inne zwierzęta</a>
+    </div>
+    <div id="pasek_filtr">
+        <div id="filtr_btn">Filtruj po kategorii</div>
+        <div id="rzwn" style="display: none;">
+
+            <div id="pkz">
+                <div class="ktgr">Psy</div>
+                <div class="ktgr">Suczki</div>
+                <div class="ktgr">Szczeniaki</div>
+                <div class="ktgr">Starsze psy</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="glr">
+
+
+       
+    </div>
+
+    <div id="strony"> 
+        <div class="kwdrt" id="str_minus"><</div>
+        <div class="kwdrt" id="1">1</div>
+        <div class="kwdrt" id="2">2</div>
+        <div class="kwdrt" id="3">3</div>
+        <div class="kwdrt" id="str_plus">></div>
+
+    </div>
+
+
+
+    <script> 
+    $(document).ready(function () {
+        const psy = [ 
+            "Puszek", "Tofik", "Oskar", "Reksio", "Tuptuś",
+            "Saba", "Pimpek", "Magnus", "Lili", "Kokos",
+            "Puszek", "Tofik", "Oskar", "Reksio", "Tuptuś",
+            "Saba", "Pimpek", "Magnus", "Lili", "Kokos"
+        ];
+        $(function() {
+            for(var i=1; i<=15; i++){
+                var do_dod = $("<div class='zwrz'> <img src='./psy/pies" + i + ".jpg'> <div class='pdps'> <div id='imie'>"+ psy[i-1] +"</div> <div id='id_zwrz'>83-562-"+i+"</div> </div> </div>'");
+                $('#glr').append(do_dod);
+            }
+            
+        })
+
+
+
+        $('#filtr_btn').click(function() {
+            $('#rzwn').slideToggle(1);
+        });
+    });
+
+    </script>
+    
+</body>
+
+</html>
